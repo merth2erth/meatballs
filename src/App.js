@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+import meatballs from './images/meatballs.png';
 import './App.css';
+import Weather from './components/weatherComponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={meatballs} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          What's the forecast?
         </p>
         <a
           className="App-link"
@@ -15,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <Weather />
         </a>
       </header>
     </div>
