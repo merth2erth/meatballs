@@ -6,6 +6,7 @@ class Weather extends Component {
     }
 
     getWeather = () => {
+        //url currently hardcoded for F-V; update for being able to select zip
         let url = `api.openweathermap.org/data/2.5/forecast?zip=27526,us&appid=${process.env.WEATHER_APP_API}`;
         fetch(url, {
             method: "GET",
@@ -14,7 +15,6 @@ class Weather extends Component {
           .then((data) => {
             console.log("Success:", data);
             this.setState({
-            //   recipe: data.recipes[0]
                 forecast: data.weather[5]
             });
           })
@@ -27,6 +27,7 @@ class Weather extends Component {
       render() {
           return (
               <div>
+                  {this.getWeather()}
                   {this.state.forecast}
               </div>
           )

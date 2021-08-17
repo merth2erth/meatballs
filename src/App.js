@@ -1,24 +1,20 @@
 import meatballs from './images/meatballs.png';
 import './App.css';
 import Weather from './components/weatherComponent';
+import Button from '@material-ui/core/Button';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={meatballs} className="App-logo" alt="logo" />
+        <img src={meatballs} alt="logo" height="250"/><p></p>
+        <Button variant="contained" color="secondary">
+          Meatball me!
+        </Button>
         <p>
           What's the forecast?
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Weather />
-        </a>
-      </header>
     </div>
   );
 }
